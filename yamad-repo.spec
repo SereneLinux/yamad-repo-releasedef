@@ -1,6 +1,6 @@
 Summary: yamad repo
 Name: yamad-repo
-Version: 1.0.2.8
+Version: 1.0.2.9
 Release: 1
 Group: System Environment/Shells
 License: NONE
@@ -20,13 +20,14 @@ mkdir -p %{buildroot}/etc/yum.repos.d/
 cat <<'EOF' > %{buildroot}/etc/yum.repos.d/yamad.repo
 [yamad]
 name=yamad Repo $releasever
-mirrorlist=https://raw.githubusercontent.com/FascodeNet/serenelinux-f-mirrorlist/$releasever/mirrorlist.x86_64
+url=https://repo.dyama.net/serenelinux_fedora/f$releasever/
 gpgcheck=1
 enabled=1
 countme=1
 type=rpm
 metadata_expire=6h
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-serene
+    file:///etc/pki/rpm-gpg/RPM-GPG-KEY-kokkiemouse
 EOF
 %clean
 rm -rf %{buildroot}
