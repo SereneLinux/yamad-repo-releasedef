@@ -1,12 +1,14 @@
 Summary: yamad repo
 Name: yamad-repo
 Version: 1.0.3.2
-Release: 1
+Release: 2
 Group: System Environment/Shells
 License: NONE
 Packager: kokkiemouse
 Vendor: INDETAIL
 Requires:   serenelinux-keyring
+BuildArch: noarch
+
 %global debug_package %{nil}
 %description
 yamad repo
