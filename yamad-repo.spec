@@ -1,10 +1,10 @@
 Summary: yamad repo
 Name: yamad-repo
-Version: 1.0.3.2
-Release: 2
+Version: 1.0.4.0
+Release: 1
 Group: System Environment/Shells
 License: NONE
-Packager: kokkiemouse
+Packager: kahenteikou
 Vendor: INDETAIL
 Requires:   serenelinux-keyring
 BuildArch: noarch
@@ -30,7 +30,7 @@ countme=1
 type=rpm
 metadata_expire=6h
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-serene
-    file:///etc/pki/rpm-gpg/RPM-GPG-KEY-kokkiemouse
+    file:///etc/pki/rpm-gpg/RPM-GPG-KEY-kahenteikou
 EOF
 %clean
 rm -rf %{buildroot}
