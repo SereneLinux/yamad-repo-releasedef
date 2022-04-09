@@ -1,5 +1,5 @@
-Summary: yamad repo
-Name: yamad-repo
+Summary: yamad repo rdef
+Name: yamad-repo-releasedef
 Version: 1.0.4.0
 Release: 1
 Group: System Environment/Shells
@@ -19,11 +19,11 @@ yamad repo
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/etc/yum.repos.d/
-cat <<'EOF' > %{buildroot}/etc/yum.repos.d/yamad.repo
-[yamad]
-name=yamad Repo $releasever
+cat <<'EOF' > %{buildroot}/etc/yum.repos.d/yamad_rdef.repo
+[yamad_rdef]
+name=yamad Repo rdef $releasever
 #baseurl=https://repo.dyama.net/serenelinux_fedora/f$releasever/
-mirrorlist=https://raw.githubusercontent.com/FascodeNet/serenelinux-f-mirrorlist/$releasever/mirrorlist.x86_64
+mirrorlist=https://raw.githubusercontent.com/FascodeNet/serenelinux-f-mirrorlist/$releasever/mirrorlist_rdef.x86_64
 gpgcheck=1
 enabled=1
 countme=1
@@ -40,5 +40,5 @@ rm -rf %{buildroot}
 %postun
 
 %files
-/etc/yum.repos.d/yamad.repo
+/etc/yum.repos.d/yamad_rdef.repo
 %changelog
